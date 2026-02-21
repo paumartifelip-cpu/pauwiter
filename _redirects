@@ -1,0 +1,3 @@
+# Cloudflare Pages — Redirects
+# Permite acceder a /new como URL limpia
+/new    /new.html    200

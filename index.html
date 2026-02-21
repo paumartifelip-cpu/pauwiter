@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pauwiter — Feed</title>
+  <meta name="description" content="Pauwiter: el feed público de paws. Publica mensajes cortos y da Like de Pau." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/styles.css" />
+  <!-- Supabase JS SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+<body>
+  <div class="app-wrapper">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <h1>🐾 Pauwiter</h1>
+        <span>Publica tu paw</span>
+      </div>
+      <div class="header-action">
+        <a href="new.html" id="btn-new-paw">+ Nuevo paw</a>
+      </div>
+    </header>
+
+    <!-- Feed -->
+    <main class="feed-section">
+      <p class="section-label">Últimos paws</p>
+      <div id="feed">
+        <!-- Posts se cargan aquí via JS -->
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      Hecho por Pauwiter 🐾
+    </footer>
+
+  </div>
+
+  <!-- Toast de notificación -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- Scripts -->
+  <script src="js/supabase-client.js"></script>
+  <script src="js/feed.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nuevo Paw — Pauwiter</title>
+    <meta name="description" content="Crea y publica un nuevo paw en Pauwiter." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Supabase JS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+</head>
+
+<body>
+    <div class="new-paw-wrapper">
+
+        <!-- Header -->
+        <header class="new-paw-header">
+            <button class="btn-back" id="btn-back" onclick="history.back()">← Atrás</button>
+            <span class="new-paw-title">Nuevo paw</span>
+        </header>
+
+        <!-- Formulario -->
+        <main>
+            <form class="new-paw-form" id="new-paw-form" novalidate>
+
+                <div class="form-group">
+                    <label for="author-name" class="form-label">Tu nombre</label>
+                    <input id="author-name" class="form-input" type="text" placeholder="Anónimo" maxlength="60"
+                        autocomplete="nickname" />
+                </div>
+
+                <div class="form-group">
+                    <label for="paw-content" class="form-label">Tu paw</label>
+                    <textarea id="paw-content" class="form-textarea"
+                        placeholder="¿Qué está pasando? Escribe tu paw aquí…" maxlength="280" autocomplete="off"
+                        spellcheck="true"></textarea>
+                    <span id="char-counter" class="char-counter">0 / 280</span>
+                </div>
+
+                <button id="btn-publish" class="btn-publish" type="submit" disabled>
+                    Publicar
+                </button>
+
+                <p class="form-hint">Máximo 280 caracteres · Si dejas el nombre vacío, aparecerás como "Anónimo"</p>
+
+            </form>
+        </main>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            Hecho por Pauwiter 🐾
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/supabase-client.js"></script>
+    <script src="js/new.js"></script>
+</body>
+
+</html>
